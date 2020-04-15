@@ -1,0 +1,73 @@
+<aura:component implements="lightning:availableForFlowScreens" controller="UACSponsorController" access="global">
+        <aura:attribute name="stages" type="String[]"/>
+   <aura:attribute name="currentStage" type="String"/>
+   <aura:attribute name="minorList" type="String[]"/> 
+        <aura:attribute name ="recordId" type="String"/>
+
+    <aura:attribute name="residentList" type="String[]"/> 
+    <aura:attribute name="nameList" type="String[]"/>
+
+   <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+   <lightning:progressIndicator aura:id="progressIndicator" currentStep="{!v.currentStage}"
+      type="path"/>
+    
+   <div class="slds-m-around--xx-large">
+         <h1 class="slds-page-header__title"> About the minor(s) </h1>
+       List the names and dates of birth of all children you are applying to sponsor.
+        <div class="slds-float_right slds-p-bottom_small">
+            <h1 class="slds-page-header__title">Add Row 
+                <lightning:buttonIcon iconName="utility:add"  size="large" variant="bare" alternativeText="Add" onclick="{!c.addRow}"/>
+            </h1>
+        </div>
+        <div class="container-fluid">        
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">#</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Minor's Name">Minor's Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Minor's DateOfBirth">Minor's Date Of Birth</div>
+                        </th>
+                         
+                    </tr>
+                </thead>   
+                <tbody>      
+      
+                        <aura:iteration items="{!v.minorList}" var="minor" indexVar="index">
+                        <tr>
+                            <td> 
+                                {!index + 1}
+                            </td>
+                            <td>
+                                <lightning:input name="minorName" type="text" maxlength="50" value="{!minor.UAC_Name__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="minorDateofBirth" type="Date"  maxlength="10" value="{!minor.UAC_Date_of_Birth__c}" />
+                            </td>
+                            <td>
+                              <td>
+                                <a onclick="{!c.removeRow}" data-record="{!index}">
+                                    <lightning:icon iconName="utility:delete" size="small" alternativeText="Delete"/>
+                                    <span class="slds-assistive-text">Delete</span>
+                                </a>
+                            </td> 
+                            </td>
+                              </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+               </div>
+    </div>
+    <div aura:id="actionButtonBar" class="slds-clearfix slds-p-top_medium">
+      <div class="slds-float_right">
+            <lightning:button aura:id="BACK" label="Previous"
+               variant="neutral" onclick="{!c.onButtonPressed}" />
+            <lightning:button aura:id="NEXT" label="Next" 
+               variant="brand" onclick="{!c.onButtonPressed}" />
+        </div>
+    </div>
+</aura:component>

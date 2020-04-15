@@ -1,0 +1,144 @@
+<aura:component controller="UACSponsorController" implements="lightning:availableForFlowScreens,force:hasRecordId,force:hasSobjectName">
+    <aura:attribute name="stages" type="String[]"/>
+   <aura:attribute name="currentStage" type="String"/>
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="Cont" type="Object"/>
+    <aura:attribute name ="SimpleCont" type="Object"/>
+    <aura:attribute name ="recordId" type="String"/>
+    
+    <aura:attribute name="residentList" type="String[]"/> 
+    <aura:attribute name="nameList" type="String[]"/>
+       <aura:attribute name="minorList" type="String[]"/> 
+
+   <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+   <lightning:progressIndicator aura:id="progressIndicator" currentStep="{!v.currentStage}"
+      type="path"/>
+
+     <div class="slds-m-around--xx-large">
+         <h1 class="slds-page-header__title">Residential History </h1>
+         Where have you lived in the last five (5) years?
+        <div class="slds-float_right slds-p-bottom_small">
+            <h1 class="slds-page-header__title">Add Row 
+                <lightning:buttonIcon iconName="utility:add"  size="large" variant="bare" alternativeText="Add" onclick="{!c.addRow}"/>
+            </h1>
+        </div>
+        <div class="container-fluid">        
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">#</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Street Address">Street Address</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="City(Country)">City(Country)</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Street Address">State</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="City(Country)">ZipCode</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Street Address">From Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="City(Country)">To Date</div>
+                        </th>
+                    </tr>
+                </thead>   
+                <tbody>      
+                    <aura:iteration items="{!v.residentList}" var="addr" indexVar="index">
+                        <tr>
+                            <td> 
+                                {!index + 1}
+                            </td>
+                            <td>
+                                <lightning:input name="addrStreet" type="text" maxlength="50" value="{!addr.Street_Address__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="addrCity" type="text"  maxlength="10" value="{!addr.City__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="addrState" type="text" maxlength="50" value="{!addr.State__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="addrZipcode" type="text"  maxlength="10" value="{!addr.Zipcode__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="addrFromDate" type="date" maxlength="50" value="{!addr.From_date__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="addrToDate" type="date"  maxlength="10" value="{!addr.To_date__c}" />
+                            </td>
+                            <td>
+                                <a onclick="{!c.removeRow}" data-record="{!index}">
+                                    <lightning:icon iconName="utility:delete" size="small" alternativeText="Delete"/>
+                                    <span class="slds-assistive-text">Delete</span>
+                                </a>
+                            </td> 
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+     <div class="slds-m-around--xx-large">
+         <h1 class="slds-page-header__title">Other names you have used </h1>
+         List other names you have used, such as your name before you were married or maternal last names and when you stopped using them.
+        <div class="slds-float_right slds-p-bottom_small">
+            <h1 class="slds-page-header__title">Add Row 
+                <lightning:buttonIcon iconName="utility:add"  size="large" variant="bare" alternativeText="Add" onclick="{!c.addNameRow}"/>
+            </h1>
+        </div>
+        <div class="container-fluid">        
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">#</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Previous Name">Previous Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="When you stopped using this name">When you stopped using this name</div>
+                        </th>
+                    </tr>
+                </thead>   
+                <tbody>      
+                    <aura:iteration items="{!v.nameList}" var="name" indexVar="index">
+                        <tr>
+                            <td> 
+                                {!index + 1}
+                            </td>
+                            <td>
+                                <lightning:input name="namePrev" type="text" maxlength="50" value="{!name.PreviousName__c}" />
+                            </td>
+                            <td>
+                                <lightning:input name="nameStop" type="text"  maxlength="20" value="{!name.Month_stopped_using_previous_name__c}" />
+                            </td>
+                            <td>
+                                <a onclick="{!c.removeNameRow}" data-record="{!index}">
+                                    <lightning:icon iconName="utility:delete" size="small" alternativeText="Delete"/>
+                                    <span class="slds-assistive-text">Delete</span>
+                                </a>
+                            </td> 
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+ 
+    <div aura:id="actionButtonBar" class="slds-clearfix slds-p-top_medium">
+      <div class="slds-float_right">
+            <lightning:button aura:id="NEXT" label="Next" 
+               variant="brand" onclick="{!c.onButtonPressed}" />
+      </div>
+   </div>
+</aura:component>

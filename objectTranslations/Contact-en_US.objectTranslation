@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>UAC</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Contact Names</value>
+        </caseValues>
+        <name>contact_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Apprehension and Transfer Information --></label>
+            <section>Apprehension and Transfer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Medical / Medical Health Information --></label>
+            <section>Medical / Medical Health Information</section>
+        </sections>
+        <sections>
+            <label><!-- Secure / Staff Secure Addendum --></label>
+            <section>Secure / Staff Secure Addendum</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- sponsor flow --></label>
+        <name>sponsor_flow</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Sponsor --></label>
+        <name>Sponsor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Unaccompanied Alien Children --></label>
+        <name>Unaccompanied_Alien_Children</name>
+    </recordTypes>
+</CustomObjectTranslation>

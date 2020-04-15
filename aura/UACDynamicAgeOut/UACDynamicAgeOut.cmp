@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:hasSobjectName" access="global" >
+    
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="Cont" type="Object"/>
+    <aura:attribute name ="SimpleCont" type="Object"/>
+    <aura:attribute name ="uacAgeOut" type ="boolean" default="false"/>
+     <force:recordData aura:Id ="ContId" recordId="{!v.recordId}"
+          fields="Id,Birthdate"
+           targetRecord="{!v.Cont}"
+           targetFields ="{!v.SimpleCont}"
+           targetError="{!v.error}"
+           recordUpdated="{!c.recordUpdated}" />
+      
+  
+    <aura:if isTrue="{!v.uacAgeOut}">
+        <div class="slds-page-header"> 
+           <div class= "slds-grid slds-grid_vertical-align-center slds-grid_align-center">
+               <span class="slds-page-header__title " style ="Color:red" title="*** UAC IS AT RISK OF AGING OUT,WILL TURN 18 IN THE NEXT 90 DAYS ****">****UAC IS AT RISK OF AGING OUT,WILL TURN 18 IN THE NEXT 90 DAYS****</span></div></div>
+  
+    <aura:set attribute ="else">
+      
+     <span></span>   
+     </aura:set>
+    </aura:if>
+</aura:component>

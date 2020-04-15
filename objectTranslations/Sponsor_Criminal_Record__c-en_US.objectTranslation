@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sponsor Criminal Record</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sponsor Criminal Records</value>
+    </caseValues>
+    <fields>
+        <label><!-- Fingerprint Result --></label>
+        <name>Fingerprint_Result__c</name>
+        <picklistValues>
+            <masterLabel>Clear</masterLabel>
+            <translation><!-- Clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred to the FFS</masterLabel>
+            <translation><!-- Referred to the FFS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fingerprints Taken --></label>
+        <name>Fingerprints_Taken__c</name>
+    </fields>
+    <fields>
+        <label><!-- No other household members in residence? --></label>
+        <name>No_other_household_members_in_residence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Public Records Check --></label>
+        <name>Public_Records_Check__c</name>
+        <picklistValues>
+            <masterLabel>Clear</masterLabel>
+            <translation><!-- Clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Clear</masterLabel>
+            <translation><!-- Not Clear --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sex Offender --></label>
+        <name>Sex_Offender__c</name>
+        <picklistValues>
+            <masterLabel>Clear</masterLabel>
+            <translation><!-- Clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Clear</masterLabel>
+            <translation><!-- Not Clear --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sponsor --></label>
+        <name>Sponsor__c</name>
+        <relationshipLabel><!-- Sponsor Criminal Records --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

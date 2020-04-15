@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sponsor</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sponsor</value>
+    </caseValues>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- BirthDate --></label>
+        <name>BirthDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Birth City --></label>
+        <name>Birth_City__c</name>
+        <picklistValues>
+            <masterLabel>Albany</masterLabel>
+            <translation><!-- Albany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Austin</masterLabel>
+            <translation><!-- Austin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Buffalo</masterLabel>
+            <translation><!-- Buffalo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chicago</masterLabel>
+            <translation><!-- Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dallas</masterLabel>
+            <translation><!-- Dallas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flagstaff</masterLabel>
+            <translation><!-- Flagstaff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GrandCanyonVillage</masterLabel>
+            <translation><!-- GrandCanyonVillage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Houston</masterLabel>
+            <translation><!-- Houston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jacksonville</masterLabel>
+            <translation><!-- Jacksonville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Key west</masterLabel>
+            <translation><!-- Key west --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miami</masterLabel>
+            <translation><!-- Miami --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Naperville</masterLabel>
+            <translation><!-- Naperville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oakland</masterLabel>
+            <translation><!-- Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orlando</masterLabel>
+            <translation><!-- Orlando --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peoria</masterLabel>
+            <translation><!-- Peoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phoenix</masterLabel>
+            <translation><!-- Phoenix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rochester</masterLabel>
+            <translation><!-- Rochester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Antonio</masterLabel>
+            <translation><!-- San Antonio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Jose</masterLabel>
+            <translation><!-- San Jose --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scottsdale</masterLabel>
+            <translation><!-- Scottsdale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Birth Country --></label>
+        <name>Birth_Country__c</name>
+        <picklistValues>
+            <masterLabel>Bolivia</masterLabel>
+            <translation><!-- Bolivia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy</masterLabel>
+            <translation><!-- Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico</masterLabel>
+            <translation><!-- Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Switzerland</masterLabel>
+            <translation><!-- Switzerland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venezuela</masterLabel>
+            <translation><!-- Venezuela --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Birth State --></label>
+        <name>Birth_State__c</name>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country of Citizenship --></label>
+        <name>Country_of_Citizenship__c</name>
+    </fields>
+    <fields>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Date --></label>
+        <name>From_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship with UAC --></label>
+        <name>Relationship_with_UAC__c</name>
+        <picklistValues>
+            <masterLabel>Aunt</masterLabel>
+            <translation><!-- Aunt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brother</masterLabel>
+            <translation><!-- Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father,</masterLabel>
+            <translation><!-- Father, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grand Father</masterLabel>
+            <translation><!-- Grand Father --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grand Mother</masterLabel>
+            <translation><!-- Grand Mother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother,</masterLabel>
+            <translation><!-- Mother, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sister</masterLabel>
+            <translation><!-- Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncle</masterLabel>
+            <translation><!-- Uncle --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sponsor Criminal Record --></label>
+        <name>Sponsor_Criminal_Record__c</name>
+        <relationshipLabel><!-- Sponsor --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- UAC A Number --></label>
+        <name>UAC_A_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- UAC --></label>
+        <name>UAC__c</name>
+        <relationshipLabel><!-- Sponsor --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- US Citizen By Birth --></label>
+        <name>US_Citizen_By_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- US Citizen --></label>
+        <name>US_Citizen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip code --></label>
+        <name>Zipcode__c</name>
+    </fields>
+    <layouts>
+        <layout>Sponsor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Generate_Authorization_Form --></label>
+        <name>Generate_Authorization_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generate_Document --></label>
+        <name>Generate_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DDP --></label>
+        <name>Run_DDP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_DocGen_Package --></label>
+        <name>Run_DocGen_Package</name>
+    </webLinks>
+</CustomObjectTranslation>

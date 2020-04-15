@@ -1,0 +1,8 @@
+<!--c:compEvent-->
+<aura:event type="COMPONENT">
+    <!-- Add aura:attribute tags to define event shape.
+         One sample attribute here. -->
+    <aura:attribute name="residentList" type="String[]"/> 
+    <aura:attribute name="nameList" type="String[]"/>
+    <aura:attribute name="minorList" type="String[]"/> 
+</aura:event>

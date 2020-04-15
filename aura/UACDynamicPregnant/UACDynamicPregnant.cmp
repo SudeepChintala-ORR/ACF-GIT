@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:hasSobjectName" access="global" >
+    
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="Cont" type="Object"/>
+    <aura:attribute name ="SimpleCont" type="Object"/>
+     <force:recordData aura:Id ="ContId" recordId="{!v.recordId}"
+          fields="Id, Pregnant__c"
+           targetRecord="{!v.Cont}"
+           targetFields ="{!v.SimpleCont}"
+           targetError="{!v.error}"/>
+      
+  
+    <aura:if isTrue="{!v.SimpleCont.Pregnant__c}">
+        
+
+          <div class="slds-page-header"> 
+           
+         <div class= "slds-grid slds-grid_vertical-align-center slds-grid_align-center">
+         <div class="slds-col"><lightning:icon iconName="custom:custom1" variant="custom1"/></div>
+             <div class="slds-col"><span class="slds-page-header__title slds-truncate" title="UAC IS PREGNANT">UAC IS PREGNANT</span></div>
+   <div class="slds-col"><lightning:icon iconName="custom:custom1" variant="custom1"/></div>
+              </div>
+        </div>
+       
+    <aura:set attribute ="else">
+      
+     <span></span>   
+     </aura:set>
+    </aura:if>
+</aura:component>
