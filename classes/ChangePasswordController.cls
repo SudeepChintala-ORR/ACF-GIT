@@ -1,5 +1,5 @@
 /**
- * Test CI/CD 5
+ * Test CI/CD 6
  */
 public with sharing class ChangePasswordController {
 
